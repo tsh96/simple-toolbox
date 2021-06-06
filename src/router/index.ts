@@ -8,6 +8,11 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
+    path: '/base-converter',
+    name: 'Base Converter',
+    component: () => import('../views/BaseConverter.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
