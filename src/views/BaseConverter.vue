@@ -2,38 +2,20 @@
 h1.w-full.text-center.text-xl.p-4 Base Converter
 
 .flex.justify-center.justify-items-center.flex-col
-  label.text-center.mt-4.mx-auto Binary (Base 2): #[br]
-    input.mx-2.px-2.border.rounded.border-black.font-mono.text-2xl(
-      v-model="base2"
-    )
-    .text-right.text-xs.text-gray-400.mr-4 digits: {{ base2.length }}
-  label.text-center.mt-4.mx-auto Octal (Base 8): #[br]
-    input.mx-2.px-2.border.rounded.border-black.font-mono.text-2xl(
-      v-model="base8"
-    )
-    .text-right.text-xs.text-gray-400.mr-4 digits: {{ base8.length }}
-  label.text-center.mt-4.mx-auto Decimal (Base 10): #[br]
-    input.mx-2.px-2.border.rounded.border-black.font-mono.text-2xl(
-      v-model="base10"
-    )
-    .text-right.text-xs.text-gray-400.mr-4 digits: {{ base16.length }}
-  label.text-center.mt-4.mx-auto Hexadecimal (Base 16): #[br]
-    input.mx-2.px-2.border.rounded.border-black.font-mono.text-2xl(
-      v-model="base16"
-    )
-    .text-right.text-xs.text-gray-400.mr-4 digits: {{ base16.length }}
-  label.text-center.mt-4.mx-auto Custom (Base #[select(v-model="base") #[option(v-for="i in 35", :key="i + 1", :value="i + 1") {{ i + 1 }}]]): #[br]
-    input.mx-2.px-2.border.rounded.border-black.font-mono.text-2xl(
-      v-model="baseCustom"
-    )
-    .text-right.text-xs.text-gray-400.mr-4 digits: {{ baseCustom.length }}
+  Field(v-model="base2") Binary (Base 2):
+  Field(v-model="base8") Octal (Base 8)
+  Field(v-model="base10") Decimal (Base 10):
+  Field(v-model="base16") Hexadecimal (Base 16):
+  Field(v-model="baseCustom") Custom (Base #[select(v-model="base") #[option(v-for="i in 35", :key="i + 1", :value="i + 1") {{ i + 1 }}]]):
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, watch } from "vue";
+import Field from "../components/base-converter/Field.vue"
 
 export default defineComponent({
   name: "Base Converter",
+  components: { Field },
   setup() {
     const base2 = ref("0");
     const base8 = ref("0");
