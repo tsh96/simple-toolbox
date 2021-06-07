@@ -13,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/BaseConverter.vue')
   },
   {
+    path: '/binary-decimal-converter',
+    name: 'Binary Decimal Converter',
+    component: () => import('../views/BinaryDecimalConverter.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

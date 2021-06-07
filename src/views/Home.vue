@@ -28,6 +28,11 @@ export default defineComponent({
           link: "base-converter",
           description: "Perform convertion between bases",
         },
+        {
+          name: "Binary Decimal Converter",
+          link: "binary-decimal-converter",
+          description: "Perform convertion between binary and decimal with various data type",
+        },
       ]),
     };
   },
