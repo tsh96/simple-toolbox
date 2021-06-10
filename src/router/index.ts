@@ -1,3 +1,4 @@
+import tools from '@/utils/tools'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
 
@@ -7,21 +8,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Home',
     component: Home
   },
-  {
-    path: '/base-converter',
-    name: 'Base Converter',
-    component: () => import('../views/BaseConverter.vue')
-  },
-  {
-    path: '/binary-decimal-converter',
-    name: 'Binary Decimal Converter',
-    component: () => import('../views/BinaryDecimalConverter.vue')
-  },
-  {
-    path: '/list-randomizer',
-    name: 'List Randomizer',
-    component: () => import('../views/ListRandomizer.vue')
-  },
+  ...tools,
   {
     path: '/about',
     name: 'About',
