@@ -31,7 +31,13 @@ export default defineComponent({
         {
           name: "Binary Decimal Converter",
           link: "binary-decimal-converter",
-          description: "Perform convertion between binary and decimal with various data type",
+          description:
+            "Perform convertion between binary and decimal with various data type",
+        },
+        {
+          name: "List Randomizer",
+          link: "list-randomizer",
+          description: "Shuffle the list with Math.random()",
         },
       ]),
     };

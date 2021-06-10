@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/BinaryDecimalConverter.vue')
   },
   {
+    path: '/list-randomizer',
+    name: 'List Randomizer',
+    component: () => import('../views/ListRandomizer.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
